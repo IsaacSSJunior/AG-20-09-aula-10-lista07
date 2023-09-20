@@ -8,6 +8,8 @@
 <body>
 <h1>Nota aluno</h1>
 <input type="number" id="input_nota">
+<h1>Frequência</h1>
+<input type="number" id="input_freq">
 <button onclick="AvaliarAluno()">Avaliar aluno</button>
     
 </body>
@@ -15,9 +17,9 @@
 <script>
     function AvaliarAluno(){
         var nota = Number(input_nota.value);
+        var freq = Number(input_freq.value);
         
-        if(nota < 6) alert (`Aluno não aprovado`)
-        else if (nota >= 8.5 && nota <= 10 ) alert (`Aluno exemplar`)
-        else if (nota >= 6 && nota <= 8.5 ) alert (`Aluno comum e aprovado`)
+        if(nota > 6 && freq > 75) alert (`Parabéns! Aprovado!`)
+        else alert (`Infelizmente, não foi dessa vez.`)
     }
 </script>
