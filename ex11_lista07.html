@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Candidato</title>
+</head>
+<body>
+<h1>Quantidade de passagens</h1>
+<input type="number" id="input_passagens">
+<button onclick="Comprar()">Comprar</button>
+
+<div id="div_mostrar"></div>
+    
+</body>
+</html>
+<script>
+    function Comprar(){
+        var passagens = Number(input_passagens.value);
+        const valorBasePassagem = 4.40
+        
+        if( passagens >= 8 && passagens <= 50){
+            valorTotal = valorBasePassagem * passagens
+
+            if (passagens >= 8 && passagens <= 19) {
+                valorTotal = valorTotal * 0.97                 
+            }
+
+            if (passagens >= 20 && passagens <= 49) {
+                valorTotal = valorTotal * 0.95                 
+            }
+            
+            if (passagens == 50 ) {
+                valorTotal = valorTotal * 0.93                 
+            }
+
+            div_mostrar.innerHTML = `<h4>${passagens} passagens - Total a pagar R$${valorTotal.toFixed()}</h4>`
+            
+        }else{
+            alert(`Quantidade inválida para o Fidelidade!`)
+        }
+    
+        
+    }
+
+    
+</script>
