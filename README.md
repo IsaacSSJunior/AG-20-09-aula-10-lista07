@@ -1,1 +1,2 @@
-# AG-20-09-aula-10-lista07
+# SPTech | Algoritmos - AULA 10 - 20/09/2023
+- Exercício lista 7 - Operador lógico AND.
